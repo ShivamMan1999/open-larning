@@ -16,7 +16,7 @@ RUN apk add --update \
     python3 \
     build-base \
     jq
-RUN npm i --silent
+RUN npm i
 RUN ./compile_planet.sh
 
 ####
