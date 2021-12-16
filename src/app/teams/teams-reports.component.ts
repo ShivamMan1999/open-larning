@@ -83,6 +83,7 @@ export class TeamsReportsComponent implements DoCheck, OnInit {
     }
     this.userStatus = this.isUserInMemberDocs(this.requests, user) ? 'requesting' : this.userStatus;
     this.userStatus = this.isUserInMemberDocs(this.members, user) ? 'member' : this.userStatus;
+    console.log(this.userStatus);
   }
 
   isUserInMemberDocs(memberDocs, user) {
