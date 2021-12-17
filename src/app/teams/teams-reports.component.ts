@@ -66,24 +66,8 @@ export class TeamsReportsComponent implements DoCheck, OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.teamId = params.get('teamId') || planetAndParentId(this.stateService.configuration);
       this.getNews(this.teamId);
-      // this.initTeam(this.teamId);
     });
   }
-
-  // initTeam(teamId: string) {
-  //   this.getTeam(teamId).subscribe((activities) => {
-  //     this.setStatus(teamId, this.userService.get());
-  //   });
-  // }
-
-  // setStatus(team, user) {
-  //   this.userStatus = 'unrelated';
-  //   if (team === undefined) {
-  //     return;
-  //   }
-  //   this.userStatus = this.isUserInMemberDocs(this.requests, user) ? 'requesting' : this.userStatus;
-  //   this.userStatus = this.isUserInMemberDocs(this.members, user) ? 'member' : this.userStatus;
-  // }
 
   isUserInMemberDocs(memberDocs, user) {
     return memberDocs.some((memberDoc: any) => memberDoc.userId === user._id && memberDoc.userPlanetCode === user.planetCode);
