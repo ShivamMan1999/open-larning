@@ -95,5 +95,21 @@ $top-row-height: calc(#{$dashboard-tile-width} + 0.5rem);
     }
 
   }
+  @media screen and (max-width: 430px) and (orientation: 'portrait'){
+    // mat-card {
+    //   // width: 61%;
 
+    // }
+    .mat-title {
+      display: flex;
+      flex-direction: column;
+      align-items: unset;
+    }
+    .date {
+      grid-area: img-end;
+    }
+    .date, .badges {
+      justify-self: unset;
+    }
+  }
 }
