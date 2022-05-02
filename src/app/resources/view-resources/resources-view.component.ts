@@ -44,7 +44,7 @@ export class ResourcesViewComponent implements OnInit, OnDestroy {
   get urlPrefix() {
     let domain = environment.couchAddress + '/';
     if (this.parent) {
-      domain = 'http://' + this.planetConfiguration.parentDomain + '/';
+      domain = `${environment.parentProtocol}://` + this.planetConfiguration.parentDomain + '/';
     }
     return domain + this.dbName + '/';
   }

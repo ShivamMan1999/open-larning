@@ -58,7 +58,7 @@ export class ResourcesViewerComponent implements OnChanges, OnDestroy {
   get urlPrefix() {
     let domain = environment.couchAddress + '/resources/';
     if (this.parent) {
-      domain = 'http://' + this.stateService.configuration.parentDomain + '/resources/';
+      domain = `${environment.parentProtocol}://` + this.stateService.configuration.parentDomain + '/resources/';
     }
     return domain;
   }
